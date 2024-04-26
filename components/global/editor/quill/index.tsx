@@ -1,10 +1,21 @@
 'use client'
+import './index.css'
 
 import Quill from 'quill'
 import { useEffect, useState } from 'react'
 
 import uploadImage from './modules/upload-image'
 import { Delta } from 'quill/core'
+
+const SizeClass: any = Quill.import('attributors/class/size')
+SizeClass.whitelist = [...SizeClass.whitelist, '40px']
+console.log(SizeClass)
+Quill.register(SizeClass, true)
+
+const SizeStyle: any = Quill.import('attributors/style/size')
+SizeStyle.whitelist = [...SizeStyle.whitelist, '40px']
+console.log(SizeStyle)
+Quill.register(SizeStyle, true)
 
 const toolbarOptions = [
   ['bold', 'italic', 'underline', 'strike'], // toggled buttons
@@ -17,7 +28,7 @@ const toolbarOptions = [
   [{ indent: '-1' }, { indent: '+1' }], // outdent/indent
   [{ direction: 'rtl' }], // text direction
 
-  [{ size: ['small', false, 'large', 'huge', '40px'] }], // custom dropdown
+  [{ size: ['10px', false, '18px', '32px', '40px'] }], // custom dropdown
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
 
   [{ color: [] }, { background: [] }], // dropdown with defaults from theme

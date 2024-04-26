@@ -2,7 +2,7 @@
 
 import { Menu } from 'antd'
 import type { MenuProps } from 'antd'
-import { sidebarTree } from '@/common/layout/main/sidebar'
+import { sidebarTree } from '@/common/main/layout/sidebar'
 
 const MainLayoutSidebar = () => {
   const handleClickMenuItem: MenuProps['onClick'] = ({

@@ -6,7 +6,10 @@ const customThemeConfig: Partial<CustomThemeConfig> & {
   extend: Partial<CustomThemeConfig>
 } = {
   extend: {
-    maxWidth: maxWidth
+    maxWidth: maxWidth,
+    borderColor: {
+      primary: '#e8e8e8'
+    }
   }
 }
 

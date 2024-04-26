@@ -32,7 +32,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "common/layout/main/sidebar.tss"
+        "common/layout/main/sidebar.tss",
+        "app/(main)/blog/edit/components/edit-content/uploader-md.tss"
     ],
     "exclude": [
         "node_modules"
